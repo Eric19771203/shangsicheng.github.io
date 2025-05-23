@@ -1,20 +1,139 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="YouYan3D克隆网站"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>YouYan3D克隆</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaoCode码小宝 - 编程探索与创作平台</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #0779e4;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #cccccc;
+            font-weight: bold;
+        }
+        #showcase {
+            min-height: 400px;
+            background: url('https://source.unsplash.com/random/1600x900/?3d,model') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        #features {
+            margin-top: 20px;
+        }
+        #features .feature {
+            float: left;
+            text-align: center;
+            width: 30%;
+            padding: 10px;
+        }
+        #features .feature h3 {
+            margin-bottom: 5px;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: #0779e4;
+            text-align: center;
+        }
+    </style>
   </head>
   <body>
-    <noscript>您需要启用JavaScript才能运行此应用。</noscript>
-    <div id="root"></div>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">BaoCode</span> 码小宝</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">首页</a></li>
+                    <li><a href="#">探索</a></li>
+                    <li><a href="#">创建</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>欢迎来到 BaoCode 码小宝</h1>
+            <p>探索、创建和分享令人惊叹的 编码</p>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <div class="feature">
+                <h3>探索模型</h3>
+                <p>浏览数千个高质量的 3D 模型，寻找灵感</p>
+            </div>
+            <div class="feature">
+                <h3>创建模型</h3>
+                <p>使用我们直观的工具创建您自己的 3D 模型</p>
+            </div>
+            <div class="feature">
+                <h3>分享作品</h3>
+                <p>与全球社区分享您的创作，获得反馈和认可</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>BaoCode 码小宝 &copy; 2024</p>
+    </footer>
   </body>
 </html>
