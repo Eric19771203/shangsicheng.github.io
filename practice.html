@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古韵五子棋 - 练习模式</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="user-info">
+            <div class="user-avatar"></div>
+            <div class="user-details">
+                <div class="user-name"></div>
+                <div class="user-stats">
+                    <div class="stat-item">
+                        <span class="stat-icon">🏆</span>
+                        <span class="wins"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">💔</span>
+                        <span class="losses"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">🤝</span>
+                        <span class="draws"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-links">
+            <button class="logout-btn" onclick="logout()">退出登录</button>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>古韵五子棋 - 练习模式</h1>
+        <div class="game-info">
+            <div class="player-turn">当前回合: <span id="current-player">黑子</span></div>
+            <div id="win-message" class="win-message"></div>
+            <button id="restart-btn">重新开始</button>
+        </div>
+        <canvas id="board-canvas" width="640" height="640"></canvas>
+        <div class="game-controls">
+            <a href="index.html" class="back-button">返回首页</a>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html> 

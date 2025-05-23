@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古韵五子棋 - 匹配对手</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="user-info">
+            <div class="user-avatar"></div>
+            <div class="user-details">
+                <div class="user-name"></div>
+                <div class="user-stats">
+                    <div class="stat-item">
+                        <span class="stat-icon">🏆</span>
+                        <span class="wins"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">💔</span>
+                        <span class="losses"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">🤝</span>
+                        <span class="draws"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-links">
+            <button class="logout-btn" onclick="logout()">退出登录</button>
+        </div>
+    </nav>
+    <div class="match-container">
+        <div class="match-content">
+            <h1>匹配对手</h1>
+            <div class="match-status">
+                <div class="loading-animation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="match-message">正在寻找对手...</p>
+            </div>
+            <button class="cancel-match-btn" onclick="cancelMatch()">取消匹配</button>
+        </div>
+    </div>
+    <script src="match.js"></script>
+</body>
+</html> 

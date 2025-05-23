@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古韵五子棋 - 首页</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="user-info">
+            <div class="user-avatar"></div>
+            <div class="user-details">
+                <div class="user-name"></div>
+                <div class="user-stats">
+                    <div class="stat-item">
+                        <span class="stat-icon">🏆</span>
+                        <span class="wins"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">💔</span>
+                        <span class="losses"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">🤝</span>
+                        <span class="draws"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-links">
+            <button class="logout-btn" onclick="logout()">退出登录</button>
+        </div>
+    </nav>
+    <div class="home-container">
+        <div class="home-content">
+            <h1 class="home-title">古韵五子棋</h1>
+            <p class="home-subtitle">传承千年智慧，尽显东方雅韵</p>
+            <div class="home-features">
+                <div class="feature">
+                    <div class="feature-icon">♟</div>
+                    <h3>经典对弈</h3>
+                    <p>复刻传统五子棋玩法</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>古韵设计</h3>
+                    <p>典雅的东方美学风格</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>即时对战</h3>
+                    <p>流畅的游戏体验</p>
+                </div>
+            </div>
+            <a href="match.html" class="start-button">开始博弈</a>
+            <a href="practice.html" class="start-button" style="margin-top:16px;background:#a0522d;">练习模式</a>
+        </div>
+    </div>
+    <script>
+        // 页面加载时检查登录状态并显示用户信息
+        window.onload = function() {
+            checkAuth();
+            const currentUser = getCurrentUser();
+            if (currentUser) {
+                const userAvatar = document.querySelector('.user-avatar');
+                const userName = document.querySelector('.user-name');
+                const wins = document.querySelector('.wins');
+                const losses = document.querySelector('.losses');
+                const draws = document.querySelector('.draws');
+                
+                // 显示用户名首字母作为头像
+                userAvatar.textContent = currentUser.username.charAt(0).toUpperCase();
+                // 显示用户名
+                userName.textContent = currentUser.username;
+                // 显示用户战绩
+                const stats = currentUser.gameStats;
+                wins.textContent = `胜利: ${stats.wins}`;
+                losses.textContent = `失败: ${stats.losses}`;
+                draws.textContent = `平局: ${stats.draws}`;
+            }
+        };
+    </script>
+</body>
+</html> 
